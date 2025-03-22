@@ -4,6 +4,9 @@ import scrapeRoutes from './routes/scrape.js';
 import configRoutes from './routes/config.js';
 import targetAccountsRoutes from './routes/targetAccounts.js';
 import logsRoutes from './routes/logs.js';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 // Routes
 app.use('/api/auth', authRoutes);
